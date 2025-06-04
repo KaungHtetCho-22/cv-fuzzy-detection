@@ -1,2 +1,1 @@
-docker build -t cv-fuzzy .
 docker run --rm -it -v $PWD:/app cv-fuzzy
