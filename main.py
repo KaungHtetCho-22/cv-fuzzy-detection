@@ -13,7 +13,7 @@ def main():
     filtered_detections = []
     for box in results.boxes:
         conf = float(box.conf)
-        iou = 1.0 
+        iou = 5.0 
         trust = filter_detection(conf, iou)
 
         if trust > 0.5:

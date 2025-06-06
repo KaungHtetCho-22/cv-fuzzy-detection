@@ -1,1 +1,7 @@
-docker run --rm -it -v $PWD:/app cv-fuzzy
+xhost +local:docker
+
+docker run --rm -it \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v $PWD:/app \
+  cv-fuzzy
